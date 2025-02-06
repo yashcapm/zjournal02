@@ -1,0 +1,18 @@
+managed with additional save
+implementation in class zbp_r_journal_n unique;
+strict ( 2 );
+
+define behavior for ZR_JOURNAL_N //alias <alias_name>
+//persistent table bkpf
+with unmanaged save
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  determination post on save  {create;}
+  mapping for ztmapp_journal_n corresponding;
+  field ( readonly ) Plant,Customerpricegroup,Material,Purchaseorderbyshiptoparty,Soldtoparty,salesorder,Yy1StudyidSdh,Item,bp_id,transactioncurrency;
+}

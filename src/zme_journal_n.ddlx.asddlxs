@@ -1,0 +1,45 @@
+@Metadata.layer: #CORE
+@UI.headerInfo:{
+  typeName: 'Total Records',
+  typeNamePlural: 'Total Records'
+  }
+
+annotate entity ZI_JOURNAL_N
+    with 
+{
+@UI.facet: [{ id : 'InvoiceMaster',
+  purpose: #STANDARD,
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'User Input',
+  position: 10 }]
+
+@UI: { lineItem: [{ position: 10}],selectionField: [{ position: 10 }] }
+  Plant;
+  @UI: { lineItem: [{ position: 20}],selectionField: [{ position: 20 }] }
+  Customerpricegroup;
+  @UI: { lineItem: [{ position: 30}],selectionField: [{ position: 30 }] }
+  Material;
+  @UI: { lineItem: [{ position: 40}],selectionField: [{ position: 40 }] }
+  Purchaseorderbyshiptoparty;
+  @UI: { lineItem: [{ position: 50}],selectionField: [{ position: 50 }] }
+  Soldtoparty;
+  @UI: { lineItem: [{ position: 60}],selectionField: [{ position: 60 }] }
+  Salesorder;
+  
+  @UI: { lineItem: [{ position: 70}] }
+  Yy1StudyidSdh;
+  @UI: { lineItem: [{ position: 70}] }
+  Belnr;
+ @UI: { identification: [{ position: 10 }] }
+  Fdate;
+ @UI: { identification: [{ position: 20 }] }
+  Tdate;
+  @UI: { identification: [{ position: 30 }] }
+   @UI: { lineItem: [{ position: 60}],selectionField: [{ position: 80 }] }
+  vdate;
+  
+  
+  
+    
+    
+}
